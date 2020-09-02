@@ -1,0 +1,128 @@
+# Implement librealsense+OpenNI2+Nite2 on Ubuntu 18.04
+This is a tutorial about how to implement RealSense SDK 2.0, OpenNI2 and Nite2 on your Ubuntu 18.04.
+| Required Info               |                      |
+| --------------------------- | -------------------- |
+| Camera Model                | D435               |
+| Operating System & Version  | Linux (Ubuntu 18.04) |
+| Platform                    | PC                   |
+| SDK Version                 | v2.24.0              |
+
+Intel® RealSense™ SDK 2.0[[github]](https://github.com/IntelRealSense/librealsense)  
+OpenNI2 [[sdk download]](https://structure.io/openni)[[github]](https://github.com/occipital/openni2)
+Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/External/nite/NiTE-Linux-x64-2.2.tar.bz2) 
+
+## 1.install Intel® RealSense™ SDK 2.0
+- 1.1 install Intel® RealSense™ SDK 2.0 [reference](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md)
+	
+	- Register the server's public key:
+	```
+	sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
+	```
+
+	- Add the server to the list of repositories
+	```
+	# Ubuntu 16
+	sudo add-apt-repository "deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial main" -u
+	# Ubuntu 18
+	sudo add-apt-repository "deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo bionic main" -u
+	```
+
+	- Install the libraries (see section below if upgrading packages):
+	```
+	sudo apt-get install librealsense2-dkms
+	sudo apt-get install librealsense2-utils
+	```
+	
+	- Optionally install the developer and debug packages:
+	```
+	sudo apt-get install librealsense2-dev
+	sudo apt-get install librealsense2-dbg 
+	```
+
+- 1.2 Reconnect the Intel RealSense depth camera and verify the installation.
+	```
+	# open a new terminal window and run
+	realsense-viewer 
+	```
+
+- 1.3 Download the source files of librealsense for future use
+	```
+	git clone https://github.com/IntelRealSense/librealsense
+	```
+
+## 2. install OpenNI2
+
+- 2.1 Download openNI2 from the official [website](https://structure.io/openni)
+	- [32 bits](https://s3.amazonaws.com/com.occipital.openni/OpenNI-Linux-x86-2.2.0.33.tar.bz2)
+	- [64 bits](https://s3.amazonaws.com/com.occipital.openni/OpenNI-Linux-x64-2.2.0.33.tar.bz2)  
+	Extract the files to wherever you want  
+
+- 2.2 Configure the environmental variables  
+	```
+	cd OpenNI-Linux-x64-2.2
+	sudo ./install.sh
+	```
+
+- 2.3 Integration for openni and librealsense [reference](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/openni2)  
+	- Compile librealsense  
+	```
+	cd librealsense/CMake
+	cmake ..
+	make
+	``` 
+	- configure path in CMakelists  
+	```
+	cd librealsense/wrappers/openni2
+	gedit CMakeLists.txt 
+	```
+	set the **OPENNI2_DIR** to your openni lib path(for linux usually "/usr/include/openni2")  
+	set the **REALSENSE2_DIR** to your lib path
+	```
+	# DEPS
+	set(OPENNI2_DIR "/usr/include/openni2" CACHE FILEPATH "OpenNI2 SDK directory")
+	set(REALSENSE2_DIR "/home/jiang/librealsense/include" CACHE FILEPATH "RealSense2 SDK directory")
+	``` 
+	
+	- Compile the realsense driver for OpenNI2  
+	```
+	cd librealsense/wrappers/openni2
+	mkdir build
+	cd build
+	cmake ..
+	make
+	```
+
+	- copy driver from librealsense directory to openni2 directory  
+	For Linux, copy `librs2driver.so` in `librealsense/wrappers/openni2/build/_out` and `librealsense2.so` in `librealsense/CMake` to `OpenNI-Linux-x64-2.2/Samples/Bin/OpenNI2/Drivers/`  
+	(if you want to launch NiViewer,copy `librs2driver.so` in `librealsense/wrappers/openni2/build/_out` and `librealsense2.so` in `librealsense/CMake` to `OpenNI-Linux-x64-2.2/Tools/OpenNI2/Drivers/` )
+
+- 2.4 Try Launch any OpenNI2 example
+	```
+	cd OpenNI-Linux-x64-2.2/Samples/bin
+	./SimpleViewer
+	```
+- 2.5 Try Launch NiViewer
+	```
+	cd OpenNI-Linux-x64-2.2/Samples/bin
+	./SimpleViewer
+	```
+
+## 3. install Nite2.2
+- 3.1 Download Nite2.2 from [here](https://sourceforge.net/projects/roboticslab/files/External/nite/NiTE-Linux-x64-2.2.tar.bz2)
+	```
+	wget https://sourceforge.net/projects/roboticslab/files/External/nite/NiTE-Linux-x64-2.2.tar.bz2
+	```
+	Extract it to your expected folder.  
+	```
+	cd NiTE-Linux-x64-2.2
+	sudo ./install.h
+	```
+- 3.2 copy driver from librealsense directory to openni2 directory  
+	For Linux, copy `librs2driver.so` in `librealsense/wrappers/openni2/build/_out` and `librealsense2.so` in `librealsense/CMake` to `NiTE-Linux-x64-2.2/Samples/Bin/OpenNI2/Drivers/`  
+
+- 3.3 Try Launch some Nite2 Example
+	```
+	cd NiTE-Linux-x64-2.2/Samples/Bin
+	./UserViewer
+	```
+	stand in front of your camera for a while for the camera to track you.
