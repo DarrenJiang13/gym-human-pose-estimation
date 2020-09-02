@@ -63,7 +63,7 @@ Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/Externa
 	sudo ./install.sh
 	```
 - 2.2.5 CMake version update for Ubuntu16.04 (if you are using Ubuntu 18.04, skip this step)
-> Default CMake version for Ubuntu 16.04 is 3.5.x while to compile OpenNI2, you need a higher version than 3.8.x
+> Default CMake version for Ubuntu 16.04 is 3.5.x while to compile OpenNI2, you need a higher version than 3.8.x  
 	- Download the `.tar.gz` file
 	```
 	sudo apt-get install build-essential
