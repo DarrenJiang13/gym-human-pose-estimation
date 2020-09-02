@@ -62,6 +62,38 @@ Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/Externa
 	cd OpenNI-Linux-x64-2.2
 	sudo ./install.sh
 	```
+- 2.2.5 CMake version update for Ubuntu16.04 (if you are using Ubuntu 18.04, skip this step)
+> Default CMake version for Ubuntu 16.04 is 3.5.x while to compile OpenNI2, you need a higher version than 3.8.x
+	- Download the `.tar.gz` file
+	```
+	sudo apt-get install build-essential
+	wget http://www.cmake.org/files/v3.10/cmake-3.10.3.tar.gz	
+	```
+	- Extract the files and install
+	```
+	tar xf cmake-3.12.3.tar.gz
+	cd cmake-3.12.3
+	./configure
+	make
+	sudo make install
+	```
+	- Add Path to source 
+	```
+	sudo gedit ~/.bashrc
+	```
+	Add two lines below to `.bashrc`
+	```
+	export PATH=/usr/local/bin:$PATH
+	export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+	```
+	update source 
+	```
+	source ~/.bashrc
+	```
+	- check cmake version
+	```
+	cmake --version
+	```
 
 - 2.3 Integration for openni and librealsense [reference](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/openni2)  
 	- Compile librealsense  
