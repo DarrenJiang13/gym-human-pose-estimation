@@ -156,7 +156,13 @@ Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/Externa
 - 3.2 copy driver from librealsense directory to openni2 directory  
 	For Linux, copy `librs2driver.so` in `librealsense/wrappers/openni2/build/_out` and `librealsense2.so` in `librealsense/CMake` to `NiTE-Linux-x64-2.2/Samples/Bin/OpenNI2/Drivers/`  
 
-- 3.3 Try Launch some Nite2 Example
+- 3.3 Configuration for Nite2 [reference](http://robots.uc3m.es/gitbook-installation-guides/install-openni-nite.html)
+	```
+	sudo ln -s $PWD/NiTE-Linux-x64-2.2/Redist/libNiTE2.so /usr/local/lib/  # $PWD should be /yourPathTo/NiTE-Linux-x64-2.2/..
+	sudo ln -s $PWD/NiTE-Linux-x64-2.2/Include /usr/local/include/NiTE-Linux-x64-2.2  # $PWD should be /yourPathTo/NiTE-Linux-x64-2.2/..
+	sudo ldconfig
+	```
+- 3.4 Try Launch some Nite2 Example
 	```
 	cd NiTE-Linux-x64-2.2/Samples/Bin
 	./UserViewer
