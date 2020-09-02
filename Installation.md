@@ -63,8 +63,8 @@ Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/Externa
 	sudo ./install.sh
 	```
 - 2.2.5 CMake version update for Ubuntu16.04 (if you are using Ubuntu 18.04, skip this step)  
-Default CMake version for Ubuntu 16.04 is 3.5.x. To compile OpenNI2, you need a higher version than 3.8.x  
-
+	Default CMake version for Ubuntu 16.04 is 3.5.x. To compile OpenNI2, you need a higher version than 3.8.x  
+	
 	- Download the `.tar.gz` file
 	```
 	sudo apt-get install build-essential
@@ -108,12 +108,15 @@ Default CMake version for Ubuntu 16.04 is 3.5.x. To compile OpenNI2, you need a 
 	cd librealsense/wrappers/openni2
 	gedit CMakeLists.txt 
 	```
-	set the **OPENNI2_DIR** to your openni lib path(for linux usually "/usr/include/openni2")  
+	set the **OPENNI2_DIR** to your openni lib path(you can find it in your "path-to-your-OpenNI-Linux-x86-2.2/OpenNIDevEnvironment")  
 	set the **REALSENSE2_DIR** to your lib path
 	```
 	# DEPS
-	set(OPENNI2_DIR "/usr/include/openni2" CACHE FILEPATH "OpenNI2 SDK directory")
-	set(REALSENSE2_DIR "/home/jiang/librealsense/include" CACHE FILEPATH "RealSense2 SDK directory")
+	set(OPENNI2_DIR "/home/pro/realsense_project/OpenNI-Linux-x86-2.2/Include" CACHE FILEPATH "OpenNI2 SDK directory")
+	set(REALSENSE2_DIR "/home/pro/realsense_project/librealsense" CACHE FILEPATH "RealSense2 SDK directory")
+	
+	# if an error like [#error This file requires compiler and library support for the ISO C++ 2011 standard.] occurs, please add one line in your CMakeLists.txt
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 	``` 
 	
 	- Compile the realsense driver for OpenNI2  
