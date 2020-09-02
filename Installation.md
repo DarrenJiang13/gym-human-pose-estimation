@@ -8,7 +8,7 @@ This is a tutorial about how to implement RealSense SDK 2.0, OpenNI2 and Nite2 o
 | SDK Version                 | v2.24.0              |
 
 Intel® RealSense™ SDK 2.0[[github]](https://github.com/IntelRealSense/librealsense)  
-OpenNI2 [[sdk download]](https://structure.io/openni)[[github]](https://github.com/occipital/openni2)
+OpenNI2 [[sdk download]](https://structure.io/openni)[[github]](https://github.com/occipital/openni2)  
 Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/External/nite/NiTE-Linux-x64-2.2.tar.bz2) 
 
 ## 1.install Intel® RealSense™ SDK 2.0
