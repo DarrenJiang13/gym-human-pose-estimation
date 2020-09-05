@@ -9,8 +9,8 @@ All methods can mainly be divided into two types: **RGBD-based** and **RGB-based
 
 Here are some tutorials to configure the librealsense SDK 2.0 and some open-source or commercial skeleton tracking SDKs.(as RGB-based methods are too slow and needs GPU,so they are less discussed in this repo.)  
 - RGBD based
-  - [realsense+OpenNI2+Nite2](https://github.com/DarrenJiang13/realsense-d435-openni2-nite2/blob/master/Installation.md)
-  - [realsense+Cubemos]
+  - [realsense+OpenNI2+Nite2](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/rs_OpenNI2_Nite2.md)
+  - [realsense+Cubemos](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/rs_Cubemos.md)
   - [realsense+Nuitrack]
 - RGB based
   - [Detectron2]
