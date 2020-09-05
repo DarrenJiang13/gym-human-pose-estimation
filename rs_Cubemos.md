@@ -78,13 +78,14 @@ Cubemos [[sdk download]](https://www.intelrealsense.com/skeleton-tracking/)
   ./cpp-realsense
   ```
   Congratulations!
+  ![Alt text](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/images/cubmos_rs.png "cubmos-realsense")
   
   You can also run skeleton tracking with a 2D webcam
   ```
   cd ~/cubemos-samples/build/cpp/webcam
   ./cpp-webcam
   ```
-  
+  ![Alt text](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/images/cubmos_webcam.png "cubmos-webcam")
   
   
   
