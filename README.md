@@ -13,5 +13,5 @@ Here are some tutorials to configure the librealsense SDK 2.0 and some open-sour
   - [realsense+Cubemos](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/rs_Cubemos.md)
   - [realsense+Nuitrack](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/rs_Nuitrack.md)
 - RGB based
-  - [Detectron2]
+  - [Detectron2](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/webcam_detectron2.md)
   - others
