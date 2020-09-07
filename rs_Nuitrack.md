@@ -55,18 +55,31 @@ Nuitrack [[sdk download]](http://download.3divi.com/Nuitrack/platforms/)  [[gith
   ```
   sudo dpkg -i <downloaded-package-name>.deb
   ```
-  if you encounter the error like
+  - if you encounter the error like
   ```
   WARNING: Can not load library module: /usr/etc/nuitrack/middleware/libNuitrackModule.so
   ERROR: Empty factory for DepthProvider
   ```
-  check the solution in **3D Sensor Specific Requirements** [here](https://download.3divi.com/Nuitrack/doc/Installation_page.html)
+  check the solution in **3D Sensor Specific Requirements** [here](https://download.3divi.com/Nuitrack/doc/Installation_page.html)  
+  - if there is an error related to `NiViewer`, try to remove `openni-utils`
+  ```
+  sudo apt remove --purge openni-utils
+  ```
+
 - 2.4 Log out to let the system changes take effect. Check that the environment variables **NUITRACK_HOME** and **LD_LIBRARY_PATH** are set correctly using the following commands
   ```
   echo $NUITRACK_HOME
   echo $LD_LIBRARY_PATH
   ```
-  NUITRACK_HOME should be equal to /usr/etc/nuitrack. LD_LIBRARY_PATH should include /usr/local/lib/nuitrack path.
+  NUITRACK_HOME should be equal to `/usr/etc/nuitrack`. LD_LIBRARY_PATH should include `/usr/local/lib/nuitrack` path.
 
-- 2.5 Launch a example and run Activation with your license
+- 2.5 Launch an example and run Activation with your license
+  - Turn on a new terminal and run the command `nuitrack`, you will see a window.   
+  - Pick your device in drop-down menu，and click test. 	
+  - Entry your license acquired from [nuitrack website](https://nuitrack.com/#pricing) and choose `activate`.	
+  - If you keep failed in activation and your test program can only last for 3-4 seconds, try step 2.6.
+
+- 2.6 Launch an example and run Activation with your license
+  - Turn on a new terminal and run the command `nuitrack_device_api_sample`, you will see a window.   
+  - Pick your device in drop-down menu，and click test. 	
   
