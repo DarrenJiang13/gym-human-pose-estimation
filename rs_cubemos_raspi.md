@@ -62,7 +62,7 @@ $ source ~/.bashrc
 ```
 $ sudo apt install autoconf automake libtool
 $ cd ~
-$ git clone --depth=1 -b v3.5.1 https://github.com/google/protobuf.git
+$ git clone --depth=1 -b v3.10.0 https://github.com/google/protobuf.git
 $ cd protobuf
 $ ./autogen.sh
 $ ./configure
