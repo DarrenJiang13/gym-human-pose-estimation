@@ -88,7 +88,7 @@ sudo ldconfig
 rm libtbb-dev_2018U2_armhf.deb
 ```
 
-- 2.9 install `RealSense` SDK/librealsense
+- 2.8 install `RealSense` SDK/librealsense
 ```
 cd ~/librealsense
 mkdir  build  && cd build
@@ -97,7 +97,7 @@ make -j1
 sudo make install
 ```
 
-- 2.10 install `pyrealsense2`
+- 2.9 install `pyrealsense2`
 ```
 cd ~/librealsense/build
 
@@ -118,7 +118,7 @@ source ~/.bashrc
 
 ```
 
-- 2.11 change `pi` settings (enable OpenGL)
+- 2.10 change `pi` settings (enable OpenGL)
 ```
 sudo apt-get install python-opengl
 sudo -H pip3 install pyopengl
@@ -133,8 +133,12 @@ sudo reboot
 ```
 
 
-- 2.12 Try RealSense D435
+- 2.11 Try RealSense D435
 Connected D435 to the pi and open terminal,run the command
 ```
 realsense-viewer
 ```
+
+## 3. Install Cubemos on Rasbian (Failed)
+It seems that the cubemos sdk does not support Raspberry Pi OS.  
+When I installed it according to the [tutorial](https://dev.intelrealsense.com/docs/skeleton-tracking-sdk-installation-guide), I found that the raspberry pi does not support the cubemos sdk(for some dependency problem).
