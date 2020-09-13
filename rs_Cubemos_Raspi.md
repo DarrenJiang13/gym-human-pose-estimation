@@ -141,4 +141,17 @@ realsense-viewer
 
 ## 3. Install Cubemos on Rasbian (Failed)
 It seems that the cubemos sdk does not support Raspberry Pi OS.  
-When I installed it according to the [tutorial](https://dev.intelrealsense.com/docs/skeleton-tracking-sdk-installation-guide), I found that the raspberry pi does not support the cubemos sdk(for some dependency problem).
+When I installed it according to the [tutorial](https://dev.intelrealsense.com/docs/skeleton-tracking-sdk-installation-guide), I found that the raspberry pi does not support the cubemos sdk(for some dependency problem). The error showed like
+```
+ cubemos-skeleton-tracking-sdk:amd64 : Depends: libboost-log1.65.1:amd64 but it is not installable
+                                       Depends: libboost-filesystem1.65.1:amd64 but it is not installable
+                                       Depends: libboost-program-options1.65.1:amd64 but it is not installable
+                                       Depends: libboost-regex1.65.1:amd64 but it is not installable
+                                       Depends: libboost-chrono1.65.1:amd64 but it is not installable
+                                       Depends: libboost-date-time1.65.1:amd64 but it is not installable
+                                       Depends: libboost-atomic1.65.1:amd64 but it is not installable
+                                       Depends: libssl1.1:amd64 but it is not installable
+                                       Depends: libgtk2.0-0:amd64 but it is not installable
+                                       Depends: libdc1394-22:amd64 but it is not installable
+```
+So, according to the tutorial, maybe only ubuntu 18.04 can work with cubemos on Raspberry Pi.
