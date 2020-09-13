@@ -4,7 +4,7 @@ This is a tutorial about how to implement RealSense SDK 2.0, Cubemos on your Ras
 | --------------------------- | -------------------- |
 | Camera Model                | D435               |
 | Operating System & Version  | Linux (Raspberry Pi OS) |
-| Platform                    | Raspberry Pi 3+      |
+| Platform                    | Raspberry Pi 3B      |
 | SDK Version                 | v2.24.0              |
 
 Intel® RealSense™ SDK 2.0[[github]](https://github.com/IntelRealSense/librealsense)  
