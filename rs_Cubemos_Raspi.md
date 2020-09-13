@@ -1,3 +1,5 @@
+Actually this document is about the failure to install Cubemos on Rasbian. After trial and error, I think only ubuntu 18.04 can work with Cubemos on Raspberry Pi. If you want to implement Cubemos on Raspberry Pi 4B with Ubuntu 18.04, please check [rs_Cubemos_Rasp_Ubuntu18](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/rs_Cubemos_Rasp_Ubuntu18.md)
+
 # Implement librealsense+Cubemos on Raspberry Pi OS
 This is a tutorial about how to implement RealSense SDK 2.0, Cubemos on your Raspberry Pi OS.
 | Required Info               |                      |
@@ -154,4 +156,4 @@ When I installed it according to the [tutorial](https://dev.intelrealsense.com/d
                                        Depends: libgtk2.0-0:amd64 but it is not installable
                                        Depends: libdc1394-22:amd64 but it is not installable
 ```
-So, according to the tutorial, maybe only ubuntu 18.04 can work with cubemos on Raspberry Pi.
+So, according to the tutorial, maybe only ubuntu 18.04 can work with Cubemos on Raspberry Pi. If you want to implement Cubemos on Raspberry Pi 4B with Ubuntu 18.04, please check [rs_Cubemos_Rasp_Ubuntu18](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/rs_Cubemos_Rasp_Ubuntu18.md)
