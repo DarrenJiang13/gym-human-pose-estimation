@@ -60,7 +60,7 @@ Cubemos [[sdk download]](https://www.intelrealsense.com/skeleton-tracking/)
    continue.
 - 2.4 activate the software
   ```
-  cd opt/cubemos/skeleton_tracking/scripts/
+  cd /opt/cubemos/skeleton_tracking/scripts/
   # do not use `sudo` here or you may encounter some environment variable problems.
   bash ./post_installation.sh
   ```
