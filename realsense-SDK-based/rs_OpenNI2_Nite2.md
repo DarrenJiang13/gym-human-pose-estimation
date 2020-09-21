@@ -169,4 +169,4 @@ Nite2[[sdk download]](https://sourceforge.net/projects/roboticslab/files/Externa
 	```
 	stand in front of your camera for a while for the camera to track you.
 
-![Alt text](https://github.com/DarrenJiang13/realsense-for-skeleton-tracking-linux/blob/master/images/openni_rs.png "optional title")
+![Alt text](https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/images/openni_rs.png "optional title")

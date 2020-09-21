@@ -1,4 +1,4 @@
-Actually this document is about the failure to install Cubemos on Rasbian. After trial and error, I think only ubuntu 18.04 can work with Cubemos on Raspberry Pi. And Cubemos company also restricts the [hardware](https://dev.intelrealsense.com/docs/skeleton-tracking-sdk-installation-guide) for users. 
+Actually this document is about the failure to install Cubemos on Rasbian. After trial and error, I think only ubuntu 18.04 can work with Cubemos. And Cubemos company also restricts the [hardware](https://dev.intelrealsense.com/docs/skeleton-tracking-sdk-installation-guide) for users. Only computers with Intel Core/Xero CPU can work. 
 
 # Implement librealsense+Cubemos on Raspberry Pi OS
 This is a tutorial about how to implement RealSense SDK 2.0, Cubemos on your Raspberry Pi OS.
