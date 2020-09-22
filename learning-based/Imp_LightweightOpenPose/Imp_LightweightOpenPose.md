@@ -23,6 +23,7 @@ git clone https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pyt
 ## 1.Install OpenVINO 
 [[installation guide]](https://docs.openvinotoolkit.org/2020.4/openvino_docs_install_guides_installing_openvino_linux.html) 
 [[Chinese blog]](https://blog.csdn.net/weixin_43741611/article/details/89365458)
+[[Chinese blog 2]](https://blog.csdn.net/weixin_43741611/article/details/89365458)
 - **download the zipped file and extract it**  
   Download the [toolkit](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit/choose-download/linux.html) into your computer. 
   My version is **l_openvino_toolkit_p_2020.4.287**
