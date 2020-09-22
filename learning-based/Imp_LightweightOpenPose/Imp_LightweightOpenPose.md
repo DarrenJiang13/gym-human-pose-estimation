@@ -7,7 +7,7 @@ and demo testing with the pretrained model. OpenVINO is the toolkit which could 
 |---|---|---|---|---|---|---|
 | **Lightweight OpenPose**  | 2018  | Daniil-Osokin  Intel  |[github](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pytorch)| PyTorch   | -CPU enabled | Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose (ArXiv 2018)|
 
-![Alt text](https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/images/lightweight_CPU_2D.png "lightweight_CPU_2D")
+![Alt](https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/images/lightweight_CPU_2D.png =200x200)
   
 ## Environments
 - Ubuntu 18.04
