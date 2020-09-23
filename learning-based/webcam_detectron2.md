@@ -22,6 +22,6 @@ This is a tutorial about how to implement detectron2, webcam on your Ubuntu 18.0
   cd detectron2/demo
   python3 demo.py --config-file ../configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_1x.yaml \
   --webcam \
-  --opts MODEL.DEVICE cpu MODEL.WEIGHTS detectron2://COCO-Keypoints/keypoint_rcnn_R_50_FPN_1x/137261548/model_final_04e291.pkl
+  --opts MODEL.WEIGHTS detectron2://COCO-Keypoints/keypoint_rcnn_R_50_FPN_1x/137261548/model_final_04e291.pkl
   ```
   ![Alt text](https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/images/detectron2_webcam.png "detectron2_webcam")
