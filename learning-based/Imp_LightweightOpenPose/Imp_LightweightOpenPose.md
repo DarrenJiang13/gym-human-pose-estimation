@@ -122,6 +122,7 @@ git clone https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pyt
   
   -------------
   **: PyTorch version higher than 1.5 would fail in this procedure with an error called `No node with name stage_1_output_0_pafs`.  
+  You can install the older version in this step just for transverting the model file and reinstall your previous pytorch after this step.
   Try to reinstall your PyTorch to 1.4.0 using 
   ```
   pip3 install torch===1.4.0+cu100 torchvision===0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
