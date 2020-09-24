@@ -7,6 +7,7 @@ and demo testing with the pretrained model.
 |---|---|---|---|---|---|---|
 | Real-time 3D Multi-person Pose Estimation  | 2019  | Daniil-Osokin Intel  |[github](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation-3d-demo.pytorch)| PyTorch   | - CPU enabled;- OpenVINO for speedup; - **Cubemos** related? | Single-Shot Multi-Person 3D Pose Estimation From Monocular RGB (ArXiv 2019)  |
 
+<div align=center><img src="https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/images/lightweight_CPU_3D.png" height="360" width="481"/></div>
   
 ## Environments
 - Ubuntu 18.04
