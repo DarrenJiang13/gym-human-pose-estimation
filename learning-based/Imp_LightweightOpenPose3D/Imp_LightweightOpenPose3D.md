@@ -3,6 +3,8 @@ This repository is about the implementation of a open-source project **Lightweig
 Including the installation of [OpenCV 4](https://opencv.org/releases/) 
 and demo testing with the pretrained model. 
 
+| Projects  |  date |  author |  github |  framework | highlight | paper |
+|---|---|---|---|---|---|---|
 | Real-time 3D Multi-person Pose Estimation  | 2019  | Daniil-Osokin Intel  |[github](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation-3d-demo.pytorch)| PyTorch   | - CPU enabled;- OpenVINO for speedup; - **Cubemos** related? | Single-Shot Multi-Person 3D Pose Estimation From Monocular RGB (ArXiv 2019)  |
 
   
@@ -10,7 +12,7 @@ and demo testing with the pretrained model.
 - Ubuntu 18.04
 - Python 3.6
 - OpenCV 4.0
-- PyTorch 1.6.0 
+- PyTorch 1.6.0(PyTorch 1.4.0 when you need to convert model to onnx and OpenVINO format.)
 
 This project will start from a demo using the [pretrained model](https://drive.google.com/file/d/1niBUbUecPhKt3GyeDNukobL4OQ3jqssH/view?usp=sharing),
 re-training might be done in the future.
@@ -95,7 +97,20 @@ For Chinese friends, if you feel it too slow to download it with browser, you ca
    make
    ./opencv_example
    ```
-## 4.Run the demo
+## 4.Prerequisites
+1.Install requirements:
+  ```
+  pip3 install -r requirements.txt
+  ```
+2.Build `pose_extractor` module:
+  ```
+  python3 setup.py build_ext
+  ```
+3. Add build folder to PYTHONPATH:
+  ```
+  export PYTHONPATH=pose_extractor/build/:$PYTHONPATH
+  ```
+## 5.Run the demo
 - Download model from [google drive](https://drive.google.com/file/d/1niBUbUecPhKt3GyeDNukobL4OQ3jqssH/view?usp=sharing) and put it in `lightweight-human-pose-estimation-3d-demo.pytorch/models`
 - Running on GPU with a webcam
   ```
@@ -103,7 +118,7 @@ For Chinese friends, if you feel it too slow to download it with browser, you ca
   ```
   > Camera can capture scene under different view angles, so for correct scene visualization, please pass camera extrinsics and focal length with `--extrinsics` and `--fx` options correspondingly (extrinsics sample format can be found in data folder). In case no camera parameters provided, demo will use the default ones.
 
-## 5.Inference with OpenVINO
+## 6.Inference with OpenVINO
 - Install OpenVINO, see [this](https://github.com/DarrenJiang13/gym-human-pose-estimation/edit/master/learning-based/Imp_LightweightOpenPose/Imp_LightweightOpenPose.md)
 - start OpenVINO environment
   ```
