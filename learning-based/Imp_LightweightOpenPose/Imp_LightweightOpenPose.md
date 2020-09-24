@@ -146,13 +146,15 @@ git clone https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pyt
   ```
   run your demo with a webcam
   ```
+  ov #start your openvino environment
   ./human_pose_estimation_demo -m <pathTo>/human-pose-estimation.xml -i cam
   ```
   run your demo with video file
   ```
+  ov #start your openvino environment
   ./human_pose_estimation_demo -m <pathTo>/human-pose-estimation.xml -i <pathTo>/yourvideo.mp4
   ```  
 - run a python demo
   ```
-  python demo.py --checkpoint-path <path_to>/checkpoint_iter_370000.pth --video 0
+  python3 demo.py --checkpoint-path <path_to>/checkpoint_iter_370000.pth --video 0
   ```
