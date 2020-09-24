@@ -95,4 +95,32 @@ For Chinese friends, if you feel it too slow to download it with browser, you ca
    make
    ./opencv_example
    ```
-   
+## 4.Run the demo
+- Download model from [google drive](https://drive.google.com/file/d/1niBUbUecPhKt3GyeDNukobL4OQ3jqssH/view?usp=sharing) and put it in `lightweight-human-pose-estimation-3d-demo.pytorch/models`
+- Running on GPU with a webcam
+  ```
+  python3 demo.py --model ./models/human-pose-estimation-3d.pth --video 0
+  ```
+  > Camera can capture scene under different view angles, so for correct scene visualization, please pass camera extrinsics and focal length with `--extrinsics` and `--fx` options correspondingly (extrinsics sample format can be found in data folder). In case no camera parameters provided, demo will use the default ones.
+
+## 5.Inference with OpenVINO
+- Install OpenVINO, see [this](https://github.com/DarrenJiang13/gym-human-pose-estimation/edit/master/learning-based/Imp_LightweightOpenPose/Imp_LightweightOpenPose.md)
+- start OpenVINO environment
+  ```
+  ov
+  ```
+- Conversion to onnx format (Remember to roll your pytorch version back to 1.4, you can install a higher version after next step)
+  ```
+  cd path-to-your-project-repo/lightweight-human-pose-estimation-3d.pytorch
+  cp scripts/convert_to_onnx.py ./ # if you do not move the script to the root directory, it will fail to import models
+  python3 convert_to_onnx.py --checkpoint-path ./models/human-pose-estimation-3d.pth
+  ```
+  You will see `human-pose-estimation-3d` files with suffix like `.onnx`, `.bin`,`.mapping`,`.xml`
+- Conversion to OpenVINO format(Remember to roll your pytorch version back to 1.4, you can install a higher version after this step)
+  ```
+  python3 <OpenVINO_INSTALL_DIR>/deployment_tools/model_optimizer/mo.py --input_model human-pose-estimation-3d.onnx --input=data --mean_values=data[128.0,128.0,128.0] --scale_values=data[255.0,255.0,255.0] --output=features,heatmaps,pafs
+  ```
+- Run the script with OpenVINO inference
+  ```
+  python3 demo.py --model human-pose-estimation-3d.xml --device CPU --use-openvino --video 0
+  ```
