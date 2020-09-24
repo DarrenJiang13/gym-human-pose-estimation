@@ -12,7 +12,7 @@ and demo testing with the pretrained model.
 - Ubuntu 18.04
 - Python 3.6
 - OpenCV 4.0
-- PyTorch 1.6.0(PyTorch 1.4.0 when you need to convert model to onnx and OpenVINO format.)
+- PyTorch 1.4.0 when you need to convert model to onnx and OpenVINO format.
 
 This project will start from a demo using the [pretrained model](https://drive.google.com/file/d/1niBUbUecPhKt3GyeDNukobL4OQ3jqssH/view?usp=sharing),
 re-training might be done in the future.
