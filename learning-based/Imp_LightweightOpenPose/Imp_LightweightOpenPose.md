@@ -127,7 +127,7 @@ git clone https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pyt
   ```
   pip3 install torch===1.4.0+cu100 torchvision===0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
   ```
-  After this step. Execute **Conversion to onnx format** and **Conversion to OpenVINO format** again.
+  After this step, execute **Conversion to onnx format** and **Conversion to OpenVINO format** again.  
   **: Here is a code for installing my previous pytorch
   ```
   pip3 install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
