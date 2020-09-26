@@ -116,7 +116,7 @@ git clone https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pyt
 - Conversion to OpenVINO format
   ```
   cd path-to-your-project-repo/lightweight-human-pose-estimation.pytorch
-  python3 <OpenVINO_INSTALL_DIR>/deployment_tools/model_optimizer/mo.py --input_model human-pose-estimation.onnx --input data --mean_values data[128.0,128.0,128.0] --scale_values data[256] --output stage_1_output_0_pafs,stage_1_output_1_heatmaps
+  python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model human-pose-estimation.onnx --input data --mean_values data[128.0,128.0,128.0] --scale_values data[256] --output stage_1_output_0_pafs,stage_1_output_1_heatmaps
   ```
   This produces model `human-pose-estimation.xml` and weights `human-pose-estimation.bin` in single-precision floating-point format (FP32).
   
