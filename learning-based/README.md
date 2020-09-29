@@ -18,5 +18,6 @@ In this project, I would focus on some open-source, fast and lightweight neural 
 ## 2. Implementation
 - 2D Pose
     - [Detectron2](https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/learning-based/webcam_detectron2.md)
-    - []
+    - [LightweightPose2D]（https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/learning-based/Imp_LightweightOpenPose/Imp_LightweightOpenPose.md）
 - 3D Pose
+    - [LightweightPose3D]（https://github.com/DarrenJiang13/gym-human-pose-estimation/blob/master/learning-based/Imp_LightweightOpenPose3D/Imp_LightweightOpenPose3D.md）
