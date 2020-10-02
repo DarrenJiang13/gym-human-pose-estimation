@@ -12,7 +12,7 @@ and demo testing with the pretrained model. OpenVINO is the toolkit which could 
 ## Environments
 - Ubuntu 18.04
 - Python 3.6
-- PyTorch 1.6.0 
+- PyTorch 1.4.0 
 
 This project will start from a demo using the [pretrained model](https://download.01.org/opencv/openvino_training_extensions/models/human_pose_estimation/checkpoint_iter_370000.pth),
 re-training might be done in the future.
