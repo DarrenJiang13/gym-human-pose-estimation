@@ -7,7 +7,7 @@ All methods can mainly be divided into two types: **RGBD-based** and **RGB-based
 - RGB-based type means getting 2D/3D human joint keypoints from a 2D image (with neural networks) and calculating the joint coordinates with depth data.  
 
 Here are some tutorials to implement the methods.
-- [RGBD camera SDK based](https://github.com/DarrenJiang13/gym-human-pose-estimation/tree/master/realsense-SDK-based) 
-- [RGB camera Learning based](https://github.com/DarrenJiang13/gym-human-pose-estimation/tree/master/learning-based)
+- [SDK based](https://github.com/DarrenJiang13/gym-human-pose-estimation/tree/master/realsense-SDK-based) 
+- [Learning based](https://github.com/DarrenJiang13/gym-human-pose-estimation/tree/master/learning-based)
 
 Hopefully I can get an EI conference paper for my master's degree with this project.
